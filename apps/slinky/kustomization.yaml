@@ -1,5 +1,6 @@
 ---
 resources:
-  # - ../cert-manager/
-  - ../slinky-slurm-operator/
-  - ../slinky-slurm-controlplane/
+  - ./keda-flux.yaml
+  - ./slurm-flux.yaml
+  - ./namespaces.yaml
+  - ../slinky-slurm-operator

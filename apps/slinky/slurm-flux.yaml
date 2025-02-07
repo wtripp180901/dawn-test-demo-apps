@@ -1,0 +1,14 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: slinky-slurm-controlplane
+  namespace: flux-system
+spec:
+  interval: 5m
+  path: "./apps/slinky-slurm-controlplane/"
+  sourceRef:
+    kind: GitRepository
+    name: myapps
+  prune: true
+  dependsOn:
+    - name: keda
